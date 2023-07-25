@@ -13,7 +13,8 @@ export class MyStateMachine implements StateMachine {
     };
   }
 }
-export async function startServer(port: number) {
+
+async function startServer(port: number) {
   const threePhaseCommitNode: ThreePhaseCommitNode = new ThreePhaseCommitNode(
     new MyStateMachine(),
   );
@@ -91,3 +92,5 @@ export async function startServer(port: number) {
 
   console.log('Server running on %s', server.info.uri);
 }
+
+startServer(process.argv[2] ? parseInt(process.argv[2]) : 8080);
