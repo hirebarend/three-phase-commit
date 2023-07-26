@@ -1,15 +1,11 @@
-# v7DyW$925&6i
-
 sudo ufw allow 8080
 
 # nodejs
 sudo apt update
-sudo apt -y upgrade
+sudo DEBIAN_FRONTEND=noninteractive apt -y upgrade
 curl -sL https://deb.nodesource.com/setup_20.x -o /tmp/nodesource_setup.sh
 sudo bash /tmp/nodesource_setup.sh
-sudo apt -y install nodejs
-# sudo dpkg -i --force-overwrite /var/cache/apt/archives/nodejs_20.5.0-deb-1nodesource1_amd64.deb
-# sudo apt -y install npm
+sudo DEBIAN_FRONTEND=noninteractive apt -y install nodejs
 
 npm install -g pm2
 
