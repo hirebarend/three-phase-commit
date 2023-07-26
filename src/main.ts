@@ -20,7 +20,7 @@ export class HttpTransport implements Transport {
 
   public async prepare(id: string, request: any): Promise<boolean> {
     const response = await axios.post<{ success: boolean }>(
-      `http://${this.address}}/_/prepare`,
+      `http://${this.address}/_/prepare`,
       {
         id,
         request,
