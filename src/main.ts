@@ -62,6 +62,10 @@ export class HttpTransport implements Transport {
 (async () => {
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
+  for (const x of process.argv) {
+    console.log(x);
+  }
+
   const coordinator: Coordinator = new Coordinator([
     new HttpTransport(process.argv[2] || '127.0.0.1:8081'),
     new HttpTransport(process.argv[3] || '127.0.0.1:8082'),
