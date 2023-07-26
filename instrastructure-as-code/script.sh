@@ -1,0 +1,1 @@
+curl -s -L https://raw.githubusercontent.com/hirebarend/three-phase-commit/main/instrastructure-as-code/linux.sh | bash
